@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+	</head>
+	<body>
+		<h2>문의 게시판 글쓰기</h2>
+		<form>
+			<table>
+				<tr>
+					<td>이름</td>
+					<td>
+						<input type="text"/>
+					</td>
+				</tr>
+				<tr>
+					<td>비밀번호</td>
+					<td>
+						<input type="password"/>
+					</td>
+				</tr>
+				<tr>
+					<td>이메일</td>
+					<td>
+						<input type="text"/>
+						@
+						<select>
+							<option>선택하세요</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>제목</td>
+					<td>
+						<input type="text"/>
+					</td>
+				</tr>
+				<tr>
+					<td>내용</td>
+					<td>
+						<textarea rows="5" cols="60"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan>파일 첨부</td>
+					<td>
+						<input type="file"/>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>5M 이하의 파일만 첨부 가능합니다.</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="submit" value="확인"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

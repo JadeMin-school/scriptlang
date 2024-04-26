@@ -3,20 +3,36 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<style>
-			#top {
+			ul#menu {
 				float: right;
-				margin: 20px 20px 20px 0px;
+				font-size: 14px;
+				margin: 40px 0px 40px 0px;
+
+				& li {
+					display: inline;
+					list-style-type: none;
+
+					&.item {
+						margin: 0px 20px 20px 20px;
+					}
+				}
 			}
 		</style>
 	</head>
 	<body>
-		<div id="head">
-			<div id="logo">
-				<img src="./img/logo2.png"/>
-			</div>
-			<div id="top">수목원소개 | 방문안내 | 고객센터 | 공지사항</div>
+		<div id="logo">
+			<img src="./img/logo2.png"/>
 		</div>
-		<div id="image">
+		<ul id="menu">
+			<li class="item">수목원소개</li>
+			<li>|</li>
+			<li class="item">방문안내</li>
+			<li>|</li>
+			<li class="item">고객센터</li>
+			<li>|</li>
+			<li class="item">공지사항</li>
+		</ul>
+		<div id="main">
 			<img src="./img/main.jpg"/>
 		</div>
 	</body>

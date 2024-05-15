@@ -61,10 +61,10 @@
 			</tr>
 			<?php while ($row = mysqli_fetch_assoc($result)) { ?>
 				<tr>
-					<td id='col1'>
+					<td id="col1">
 						<?php echo $row["board_idx"] ?>
 					</td>
-					<td id='col2'>
+					<td id="col2">
 						<?php echo $row["title"] ?>
 					</td>
 					<td id="col3">
@@ -73,7 +73,7 @@
 					<td>
 						<?php echo $row["reg_date"] ?>
 					</td>
-					<td id='col5'>
+					<td id="col5">
 						<?php echo $row["read_num"] ?>
 					</td>
 				</tr>

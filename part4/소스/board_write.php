@@ -1,3 +1,8 @@
+<?php
+	require_once "{$_SERVER["DOCUMENT_ROOT"]}/dbconn.php";
+?>
+
+
 <!DOCTYPE html>
 <html>
 	<head>

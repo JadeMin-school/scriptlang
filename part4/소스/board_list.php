@@ -27,28 +27,28 @@
 				<th id="col5">조회수</th>
 				<th id="col5">등록IP</th>
 			</tr>
-			<?php while ($row = mysqli_fetch_array($result)) { ?>
+			<?php while ($result = mysqli_fetch_array($result)) { ?>
 				<tr>
 					<td id="col1">
-						<?=$row["board_idx"]?>
+						<?=$result["board_idx"]?>
 					</td>
 					<td id="col2">
-						<a href="board_view.php?board_idx=<?=$row["board_idx"]?>">
-							<?=$row["title"]?>
+						<a href="board_view.php?board_idx=<?=$result["board_idx"]?>">
+							<?=$result["title"]?>
 						</a>
 					</td>
 					<!-- <a href='board_view.php?board_idx=4'>제목입니다. </a> -->
 					<td id="col3">
-						<?=$row["write_name"]?>
+						<?=$result["write_name"]?>
 					</td>
 					<td id="col4">
-						<?=$row["reg_date"]?>
+						<?=$result["reg_date"]?>
 					</td>
 					<td id="col">
-						<?=$row["read_num"]?>
+						<?=$result["read_num"]?>
 					</td>
 					<td id="col">
-						<?=$row["writer_ip"]?>
+						<?=$result["writer_ip"]?>
 					</td>
 				</tr>
 			<?php } ?>

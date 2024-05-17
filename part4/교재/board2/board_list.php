@@ -50,15 +50,15 @@ td {
     <th id='col5'>조회수</th>
     <th id='col5'>등록IP</th>
   </tr>
- <?php  while ($row = mysqli_fetch_array($result)) { ?>
+ <?php  while ($result = mysqli_fetch_array($result)) { ?>
 <tr>    
-<td id='col1'><?php echo $row["board_idx"] ?></td>
-    <td id='col2'><A href='board_view.php?board_idx=<?php echo $row["board_idx"] ?>'> <?php echo $row["title"] ?></A></td>
+<td id='col1'><?php echo $result["board_idx"] ?></td>
+    <td id='col2'><A href='board_view.php?board_idx=<?php echo $result["board_idx"] ?>'> <?php echo $result["title"] ?></A></td>
 <!-- <A href='board_view.php?board_idx=4'>제목입니다. </A> -->
-    <td id='col3'><?php echo $row["write_name"] ?></td>
-    <td id='col4'><?php echo $row["reg_date"] ?></td>
-    <td id='col'><?php echo $row["read_num"] ?></td>
-	    <td id='col'><?php echo $row["writer_ip"] ?></td>
+    <td id='col3'><?php echo $result["write_name"] ?></td>
+    <td id='col4'><?php echo $result["reg_date"] ?></td>
+    <td id='col'><?php echo $result["read_num"] ?></td>
+	    <td id='col'><?php echo $result["writer_ip"] ?></td>
 <?php } ?>
  </tr>
  <tr> <td colspan=6 align=center> <A href="./write.html"> 글쓰기 </A></TD></TR>

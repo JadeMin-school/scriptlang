@@ -2,10 +2,16 @@
 	require_once "{$_SERVER["DOCUMENT_ROOT"]}/dbconn.php";
 ?>
 <?php
-	$result = mysqli_query($conn, "SELECT * FROM board WHERE board_idx = {$_GET["board_idx"]}");
-	$row = mysqli_fetch_assoc($result);
+	$result = mysqli_query(
+		$conn,
+		"SELECT * FROM board WHERE board_idx = {$_GET["board_idx"]}"
+	);
+	$result = mysqli_fetch_assoc($result);
 
-	$result2 = mysqli_query($conn, "UPDATE board SET read_num = read_num + 1 WHERE board_idx = {$_GET["board_idx"]}");
+	mysqli_query(
+		$conn,
+		"UPDATE board SET read_num = read_num + 1 WHERE board_idx = {$_GET["board_idx"]}"
+	);
 ?>
 
 
@@ -19,24 +25,24 @@
 		<table border="1">
 			<tr>
 				<td>이름</td>
-				<td><?=$row["write_name"]?> </td>
+				<td><?=$result["write_name"]?> </td>
 			</tr>
 			<tr>
 				<td>제목</td>
-				<td><?=$row["title"]?></td>
+				<td><?=$result["title"]?></td>
 			</tr>
 			<tr>
 				<td>내용</td>
-				<td><?=nl2br($row["contents"])?></td>
+				<td><?=nl2br($result["contents"])?></td>
 			</tr>
 			<tr>
 				<td>IP</td>
-				<td><?=$row["writer_ip"]?></td>
+				<td><?=$result["writer_ip"]?></td>
 			</tr>
 			<tr>
 				<td colspan="2">
 					<a href="./board_list.php">목록</a>
-					<a href="./board_delete.php?board_idx=<?php echo $row['board_idx']?>">삭제</a>
+					<a href="./board_delete.php?board_idx=<?php echo $result['board_idx']?>">삭제</a>
 				</td>
 			</tr>
 		</table>

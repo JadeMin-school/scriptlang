@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8"/>
+		<?php require_once("{$_SERVER["DOCUMENT_ROOT"]}/header.php"); ?>
 	</head>
 	<body>
 		<h3>문의 게시판 글쓰기</h3>
-		<form action="board_wrte_ok.php" method="post">
+		<form action="board_write_ok.php" method="post">
 			<table>
 				<tr>
 					<td>이름</td>
@@ -16,13 +16,13 @@
 				<tr>
 					<td>제목</td>
 					<td>
-						<input type="text"/>
+						<input type="text" name="title"/>
 					</td>
 				</tr>
 				<tr>
 					<td>내용</td>
 					<td>
-						<textarea rows="6" cols="50"></textarea>
+						<textarea rows="6" cols="50" name="contents"></textarea>
 					</td>
 				</tr>
 				<tr>

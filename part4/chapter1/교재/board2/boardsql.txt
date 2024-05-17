@@ -1,0 +1,11 @@
+create table board (board_idx int NOT NULL Auto_increment, 
+title varchar(80) NOT NULL, contents varchar(200), 
+write_name varchar(20), reg_date datetime,read_num int,
+                    writer_ip varchar(15),
+PRIMARY KEY ( board_idx ) )
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;;
+
+
+insert into board(title, contents,write_name,writer_ip,reg_date, read_num) values
+('제목입니다.','.내용입니다.','홍성표','192.168.0.1',sysdate(),0)

@@ -1,0 +1,39 @@
+mysql -uroot -p
+show databases;
+use mysql
+show tables;
+select * from user;
+select * from user where  User='pma';
+
+http://121.156.144.161/insert.php
+create database duriweb;
+show databases;
+create user 'dietmall'@'%' identified by '1111';
+grant all privileges on dietmall.* to 'dietmall'@'%';
+
+계정생성 오류시
+REPAIR TABLE mysql.db
+REPAIR TABLE mysql.user
+
+
+flush privileges;
+use dietmall;
+create table board (board_idx int NOT NULL Auto_increment, 
+title varchar(80) NOT NULL, contents varchar(200), 
+write_name varchar(20), reg_date datetime,read_num int,
+PRIMARY KEY ( board_idx ) )
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;;
+
+
+insert into board(title, contents,write_name,reg_date, read_num) values('title3','its contents3','홍성표2',sysdate(),0);
+
+
+insert into board2 (b
+show tables;
+desc board;
+insert into board(board_idx,title,contents) values(3,'title3','its contents3');
+
+
+alter user 'duriweb'@'%' identified by '1234';
+

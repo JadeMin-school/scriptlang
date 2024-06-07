@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<script>
+			function over(obj) {
+				obj.src = "/assets/peach.gif";
+			}
+			function out(obj) {
+				obj.src = "/assets/sam.gif";
+			}
+		</script>
+	</head>
+	<body>
+		<h1>마우스를 올려보세요</h1>
+		<hr/>
+		<img src="/assets/sam.gif" alt="삼이미지" onmouseover="over(this)" onmouseout="out(this)"/>
+	</body>
+</html>

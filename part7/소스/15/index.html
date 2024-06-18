@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+	</head>
+	<body>
+		<h3>시간 초가 짝수이면 홀수이면, 색깔 바뀌게</h3>
+		<script>
+			var now = new Date();
+			if (now.getSeconds() % 2 == 0) {
+				document.body.style.backgroundColor = "violet";
+			} else {
+				document.body.style.backgroundColor = "lightskyblue";
+			}
+		</script>
+	</body>
+</html>

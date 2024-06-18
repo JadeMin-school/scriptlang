@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+	</head>
+	<body>
+		<h3>String 객체 메소드 활용</h3>
+		<script>
+			var a = new String("Boys and Girls");
+			var b = "!!";
+			document.write("a : " + a + "<br/>");
+			document.write("b : " + b + "<br/>");
+			document.write(a.charAt(1) + "<br/>");
+			document.write(a.concat(b, "입니다") + "<br/>");
+			document.write(a.indexOf("s") + "<br/>");
+			var sub = a.split(" ");
+			for (var i = 0; i < sub.length; i++)
+				document.write("sub " + i + " = " + sub[i] + "<br/>");
+		</script>
+	</body>
+</html>

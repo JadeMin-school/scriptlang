@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<script>
+			function pr(msg, arr) {
+				document.write(msg + arr.toString() + "<br/>");
+			}
+		</script>
+	</head>
+	<body>
+		<h3>객체로 배열 만들기</h3>
+		<script>
+			var a = new Array("1", "3", "2");
+			var b = new Array("5");
+			var c;
+			pr("배열 a=", a);
+			pr("배열 b=", b);
+			document.write("<hr/>");
+			c = a.concat(b);
+			pr("concat(b) 후 c", c);
+			pr("concat(b) 후 a", a);
+			c = a.join("#");
+			pr("join() 후 c", c);
+			pr("join() 후 a", a);
+			c = a.sort();
+			pr("sort() 후 c", c);
+			pr("sort() 후 a", a);
+		</script>
+	</body>
+</html>
